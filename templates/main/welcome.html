@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main Css code -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
+
+
+
+    <title>Siver Book Library</title>
+</head>
+<body>
+    <!-- Start Header -->
+    <div class="header">
+        <div class="container">
+            <a class="logo" href="">Silver Book Library</a>
+
+            <ul class="auth">
+                <li><a href="/admin/login/">login</a></li>
+            </ul>
+        </div>
+    </div> 
+    <!-- End Header -->
+
+    <!-- Start Main -->
+    <div class="main">
+        <div class="container">
+            <p class="my-name">Muhammad Anas Darwish</p>
+            <h1 class="welcome">Welocme To Silver Book Library</h1>
+            <p class="description">Library Managment System</p>
+
+            <div class="tools">
+                <i>Python</i>
+                <i>Django Frameword</i>
+                <i>Rest API Framework</i>
+                <i>PostgreSQL</i>
+            </div>
+
+            <div class="user-account">
+                <p class="username"><span>username</span>7b89dc5e-964a-4fa4-a5f9-32c98affe542</p>
+                <p class="password"><span>password</span>DRFH@1table</p>
+            </div>
+        </div>
+    </div>
+    <!-- End Main -->
+
+    <!-- Start Urls -->
+    <div class="urls">
+        <div class="title">URLs</div>
+        <div class="container">
+            <div class="content">
+                <p class="comment">المدير</p>
+                <p class="code">admin/</p>
+                <p class="comment">عرض جميع المؤلفين وإضافة مؤلف</p>
+                <p class="code">api/authors/</p>
+                <p class="comment">تعديل أو حذف المؤلف</p>
+                <p class="code">api/authors/&lt;str:pk&gt;/</p>
+                <p class="comment">عرض جميع الكتب وإضافة كتاب</p>
+                <p class="code">api/books/</p>
+                <p class="comment">تعديل أو حذف كتاب</p>
+                <p class="code">api/books/&lt;str:pk&gt;</p>
+                <p class="comment">استعارة أو إرجاع كتاب</p>
+                <p class="code">api/metaphors/</p>
+                <p class="comment">عرض جميع الزبائن و إضافة زبون</p>
+                <p class="code">api/customers/</p>
+                <p class="comment">تعديل بيانات زبون</p>
+                <p class="code">api/customers/&lt;str:pk&gt;/</p>
+                <p class="comment">عرض أو إضافة تصنيفات الكتب</p>
+                <p class="code">api/categories/</p>
+                <p class="comment">تعديل اسم تصنيف كتاب</p>
+                <p class="code">api/categories/&lt;str:pk&gt;/</p>
+                <p class="comment">تسجيل خروج -يجب ان يكون عن طريق الأوامر-</p>
+                <p class="code">api/logout/</p>
+                <p class="comment">تسجيل الدخول -يحب أن يكون عن طريق الأوامر-</p>
+                <p class="code">api/login/</p>
+                <p class="comment">عرض جميع الموظفين وإضافة موضف</p>
+                <p class="code">api/users/</p>
+                <p class="comment">تعديل بيانات موضف</p>
+                <p class="code">api/users/&lt;str:pk&gt;/</p>
+                <p class="comment">اضافة مجموعة</p>
+                <p class="code">api/groups/</p>
+                <p class="comment">تعديل المجموعات</p>
+                <p class="code">api/groups/&lt;str:pk&gt;/</p>
+            </div>
+        </div>
+    </div>
+    <!-- End Urls -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+        <p class="footer-title">
+            Copyrights @ 
+            <span>Muhammad Anas Darwish</span>
+        </p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/anas.darwish.927"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/anas.darwish.927/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/Muhammad-Anas-Darwish"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/muhammad-anas-darwish-b58875233/"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <!-- End Footer -->
+</body>
+</html>
