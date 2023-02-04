@@ -212,7 +212,7 @@ ul {
     font-weight: 700;
 }
 
-.main .container .notes:not() {
+.main .container .notes {
     color: #ffc107;
     margin: 0;
 }
