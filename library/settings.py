@@ -132,7 +132,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
@@ -142,7 +141,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
-# CORS_ALLOW_ALL_ORIGINS = True
 
 # change default user
 AUTH_USER_MODEL = 'api.MyUser' 

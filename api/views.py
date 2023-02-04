@@ -3,19 +3,18 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.views import APIView
-from api.permissions import EmployeePermissions
+# from api.permissions import EmployeePermissions
 from api.serializers import *
 from django.shortcuts import render
 from .models import *
-# from base.views import book
 
 class AuthorsView(generics.ListCreateAPIView):
-    permission_classes = [EmployeePermissions]
+    # permission_classes = [IsAuthenticated]
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
 
 class AuthorView(generics.ListAPIView, generics.UpdateAPIView, generics.DestroyAPIView):
-    permission_classes = [EmployeePermissions]
+    # permission_classes = [IsAuthenticated]
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
 
@@ -45,7 +44,7 @@ class AuthorView(generics.ListAPIView, generics.UpdateAPIView, generics.DestroyA
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 class BooksView(generics.ListCreateAPIView):
-    permission_classes = [EmployeePermissions]
+    # permission_classes = [IsAuthenticated]
     queryset = Book.objects.all()
 
     def get_serializer_class(self):
@@ -54,7 +53,7 @@ class BooksView(generics.ListCreateAPIView):
         return BooksSerializer
 
 class BookView(generics.ListAPIView, generics.UpdateAPIView, generics.DestroyAPIView):
-    permission_classes = [EmployeePermissions]
+    # permission_classes = [IsAuthenticated]
     queryset = Book.objects.all()
     serializer_class = BooksSerializer
 
@@ -83,7 +82,7 @@ class BookView(generics.ListAPIView, generics.UpdateAPIView, generics.DestroyAPI
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 class MetaphorsView(generics.ListCreateAPIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     queryset = Metaphor.objects.all()
 
     # تحديد الحقول
@@ -114,12 +113,12 @@ class MetaphorsView(generics.ListCreateAPIView):
         serializer.save(employee=self.request.user)
 
 class CustomersView(generics.ListCreateAPIView):
-    permission_classes = [EmployeePermissions]
+    # permission_classes = [IsAuthenticated]
     serializer_class = CustomersSerializer
     queryset = Customer.objects.all()
 
 class CustomerView(generics.ListAPIView, generics.UpdateAPIView, generics.DestroyAPIView):
-    permission_classes = [EmployeePermissions]
+    # permission_classes = [IsAuthenticated]
     queryset = Customer.objects.all()
     serializer_class = CustomersSerializer
 
@@ -147,12 +146,12 @@ class CustomerView(generics.ListAPIView, generics.UpdateAPIView, generics.Destro
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 class CategoriesView(generics.ListCreateAPIView):
-    permission_classes = [EmployeePermissions]
+    # permission_classes = [IsAuthenticated]
     serializer_class = CategoriesSerializer
     queryset = Category.objects.all()
 
 class CategoryView(generics.ListAPIView, generics.UpdateAPIView, generics.DestroyAPIView):
-    permission_classes = [EmployeePermissions]
+    # permission_classes = [IsAuthenticated]
     queryset = Category.objects.all()
     serializer_class = CategoriesSerializer
 
@@ -182,12 +181,12 @@ class LogoutView(APIView):
         return Response(status=status.HTTP_200_OK)
 
 class UsersView(generics.ListCreateAPIView):
-    permission_classes = [IsAdminUser]
+    # permission_classes = [IsAdminUser]
     queryset = MyUser.objects.all()
     serializer_class = UsersSerializer
 
 class UserView(generics.ListAPIView, generics.UpdateAPIView, generics.DestroyAPIView):
-    permission_classes = [IsAdminUser]
+    # permission_classes = [IsAdminUser]
     queryset = MyUser.objects.all()
     serializer_class = UsersSerializer
 
@@ -212,12 +211,12 @@ class UserView(generics.ListAPIView, generics.UpdateAPIView, generics.DestroyAPI
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 class GroupsView(generics.ListCreateAPIView):
-    permission_classes = [IsAdminUser]
+    # permission_classes = [IsAdminUser]
     queryset = Group.objects.all()
     serializer_class = GroupsSerializer
 
 class GroupView(generics.ListAPIView, generics.UpdateAPIView, generics.DestroyAPIView):
-    permission_classes = [IsAdminUser]
+    # permission_classes = [IsAdminUser]
     queryset = Group.objects.all()
     serializer_class = GroupsSerializer
 

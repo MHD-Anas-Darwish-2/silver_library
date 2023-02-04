@@ -212,6 +212,15 @@ ul {
     font-weight: 700;
 }
 
+.main .container .notes:not() {
+    color: #ffc107;
+    margin: 0;
+}
+
+.main .container .notes:last-child {
+    margin-bottom: 20px;
+}
+
 .main .container .tools i {
     background-color: var(--main-color);
     color: var(--section-background);
