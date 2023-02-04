@@ -217,7 +217,7 @@ ul {
     margin: 0;
 }
 
-.main .container .notes:last-child {
+.main .container .notes:last-of-type {
     margin-bottom: 20px;
 }
 
